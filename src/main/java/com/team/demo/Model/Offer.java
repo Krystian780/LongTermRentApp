@@ -1,16 +1,43 @@
 package com.team.demo.Model;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Data;
-import java.io.File;
 
 @AllArgsConstructor
-@Data
 @Entity
+@Table(name="Offers")
 public class Offer {
+    private int id;
     private String offerName;
-    private File file;
-    private Author author;
+    private Description description;
 
+    @Column
+    @Id
+    @GeneratedValue(strategy=GenerationType.SEQUENCE)
+    public int getId() {
+        return id;
+    }
+
+    @Column
+    public String getOfferName() {
+        return offerName;
+    }
+
+    @ManyToOne(cascade = CascadeType.ALL, targetEntity = Description.class)
+    @JoinColumn(name="city_id")
+    public Description getDescription() {
+        return description;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setOfferName(String offerName) {
+        this.offerName = offerName;
+    }
+
+    public void setDescription(Description description) {
+        this.description = description;
+    }
 }

@@ -1,25 +1,27 @@
 package com.team.demo.Controller;
 
 import com.team.demo.Model.Offer;
-import com.team.demo.Service.OfferAdder;
+import com.team.demo.Service.OfferRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class OfferController {
 
     @Autowired
-    OfferAdder offerAdder;
+    OfferRepository offerRepository;
 
     @PostMapping("/employees")
     public Offer offer(@RequestBody Offer offer) {
-        offerAdder.addOffer(offer);
+        offerRepository.addOffer(offer);
         return offer;
     }
 
-
-
+    @RequestMapping(value = "/employees", produces = "application/json")
+    public List<Offer> getOffers() {
+        return offerRepository.getOffers();
+    }
 
 }
