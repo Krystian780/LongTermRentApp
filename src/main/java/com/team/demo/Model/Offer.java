@@ -7,11 +7,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="Offers")
 public class Offer {
     private int id;
     private String offerName;
     private Description description;
+    private City city;
 
     @Column
     @Id
@@ -26,9 +26,15 @@ public class Offer {
     }
 
     @ManyToOne(cascade = CascadeType.ALL, targetEntity = Description.class)
-    @JoinColumn(name="city_id")
+    @JoinColumn(name="description_id")
     public Description getDescription() {
         return description;
+    }
+
+    @ManyToOne(cascade = CascadeType.ALL, targetEntity = City.class)
+    @JoinColumn(name="city_id")
+    public City getCity() {
+        return city;
     }
 
     public void setId(int id) {
@@ -42,4 +48,9 @@ public class Offer {
     public void setDescription(Description description) {
         this.description = description;
     }
+
+    public void setCity(City city) {
+        this.city = city;
+    }
+
 }
