@@ -2,7 +2,9 @@ package com.team.demo.Model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name="Offers")
