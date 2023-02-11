@@ -10,6 +10,8 @@ import lombok.NoArgsConstructor;
 public class Offer {
     private int id;
     private String offerName;
+    @Enumerated(EnumType.STRING)
+    private User user;
     private Description description;
     private City city;
 
@@ -18,6 +20,14 @@ public class Offer {
     @GeneratedValue(strategy=GenerationType.SEQUENCE)
     public int getId() {
         return id;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = User.USER;
     }
 
     @Column

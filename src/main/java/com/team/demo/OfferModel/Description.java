@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Description {
+class Description {
     private int id;
     private int price;
     private String objectDescription;
