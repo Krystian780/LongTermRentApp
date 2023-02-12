@@ -9,14 +9,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Builder
-public class City {
+public class Review {
     private int id;
-    private String name;
-    private String province;
+    private String review;
+    private int mark;
 
     @Column
     @Id
-    @GeneratedValue(strategy=GenerationType.SEQUENCE)
+    @GeneratedValue(strategy= GenerationType.SEQUENCE)
     public int getId() {
         return id;
     }
@@ -26,21 +26,20 @@ public class City {
     }
 
     @Column
-    public String getName() {
-        return name;
+    public String getReview() {
+        return review;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setReview(String review) {
+        this.review = review;
     }
 
     @Column
-    public String getProvince() {
-        return province;
+    public int getMark() {
+        return mark;
     }
 
-    public void setProvince(String province) {
-        this.province = province;
+    public void setMark(int mark) {
+        this.mark = mark;
     }
-
 }

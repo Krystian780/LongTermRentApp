@@ -2,16 +2,20 @@ package com.team.demo.OfferModel;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Builder
 public class Offer {
     private int id;
     private String offerName;
     private Description description;
     private City city;
+    private Review review;
+    private User user;
 
     @Column
     @Id
@@ -50,6 +54,5 @@ public class Offer {
     public void setCity(City city) {
         this.city = city;
     }
-
 
 }

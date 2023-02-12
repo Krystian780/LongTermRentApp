@@ -5,18 +5,21 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Builder
-public class City {
+public class User {
     private int id;
     private String name;
-    private String province;
+    private String surname;
+    private List<Review> reviews;
 
     @Column
     @Id
-    @GeneratedValue(strategy=GenerationType.SEQUENCE)
+    @GeneratedValue(strategy= GenerationType.SEQUENCE)
     public int getId() {
         return id;
     }
@@ -35,12 +38,20 @@ public class City {
     }
 
     @Column
-    public String getProvince() {
-        return province;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setProvince(String province) {
-        this.province = province;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
+    @Column
+    public List<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
+    }
 }

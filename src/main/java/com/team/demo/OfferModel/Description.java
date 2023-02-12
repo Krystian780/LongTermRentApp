@@ -2,11 +2,14 @@ package com.team.demo.OfferModel;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Builder
+public
 class Description {
     private int id;
     private int price;
