@@ -2,7 +2,6 @@ package com.team.demo.Controller;
 
 import com.team.demo.OfferModel.City;
 import com.team.demo.OfferModel.Offer;
-import com.team.demo.OfferModel.User;
 import com.team.demo.Service.OfferService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -16,12 +15,8 @@ public class OfferController {
     @Autowired
     private OfferService offerRepository;
 
-    @PostMapping("/login")
-    public User login(@RequestBody User user) {
-        offerRepository.addOffer(offer);
-        return offer;
-    }
-
+    //@Autowired
+   // private UserService userService;
 
     @PostMapping("/offer/add")
     public Offer addOffer(@RequestBody Offer offer) {

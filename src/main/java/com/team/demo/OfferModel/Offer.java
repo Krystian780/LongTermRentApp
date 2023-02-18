@@ -3,56 +3,27 @@ package com.team.demo.OfferModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Builder
+@Data
 public class Offer {
-    private int id;
-    private String offerName;
-    private Description description;
-    private City city;
-    private Review review;
-    private User user;
-
-    @Column
     @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE)
-    public int getId() {
-        return id;
-    }
-
-    @Column
-    public String getOfferName() {
-        return offerName;
-    }
-
+    private int id;
+    private String offerName;
+    @OneToOne(cascade = CascadeType.ALL, targetEntity = User.class)
+    private User user;
     @OneToOne(cascade = CascadeType.ALL, targetEntity = Description.class)
-    public Description getDescription() {
-        return description;
-    }
-
+    private Description description;
     @OneToOne(cascade = CascadeType.ALL, targetEntity = City.class)
-    public City getCity() {
-        return city;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setOfferName(String offerName) {
-        this.offerName = offerName;
-    }
-
-    public void setDescription(Description description) {
-        this.description = description;
-    }
-
-    public void setCity(City city) {
-        this.city = city;
-    }
+    private City city;
+    @OneToMany(cascade = CascadeType.ALL, targetEntity = Review.class)
+    private List<Review> reviewList;
 
 }

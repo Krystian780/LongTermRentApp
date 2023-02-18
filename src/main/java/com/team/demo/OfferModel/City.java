@@ -3,44 +3,19 @@ package com.team.demo.OfferModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Builder
+@Data
 public class City {
+    @Id
+    @GeneratedValue(strategy=GenerationType.SEQUENCE)
     private int id;
     private String name;
     private String province;
-
-    @Column
-    @Id
-    @GeneratedValue(strategy=GenerationType.SEQUENCE)
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    @Column
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Column
-    public String getProvince() {
-        return province;
-    }
-
-    public void setProvince(String province) {
-        this.province = province;
-    }
 
 }

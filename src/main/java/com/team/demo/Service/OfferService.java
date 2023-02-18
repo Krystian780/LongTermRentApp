@@ -14,27 +14,35 @@ public class OfferService {
     @Autowired
     private OfferRepository offerRepository;
 
-    public void addOffer(Offer offer){
+    public void addOffer(Offer offer) {
         offerRepository.save(offer);
     }
 
-    public void removeOffer(Offer offer){
+    public void removeOffer(Offer offer) {
         offerRepository.delete(offer);
     }
 
-    public List<Offer> getOffers(){
+    public List<Offer> getOffers() {
         return offerRepository.findAll();
     }
 
-    public List<City> getCities(){
+
+    public List<City> getCities() {
         return offerRepository.findAll().stream()
                 .map(Offer::getCity)
                 .collect(Collectors.toList());
     }
 
-    public List<Offer> getOffersForGivenCity(String city){
+    public List<Offer> getOffersForGivenCity(String city) {
         return offerRepository.findAll().stream()
                 .filter(offer -> offer.getCity().getName().equalsIgnoreCase(city))
                 .collect(Collectors.toList());
     }
+
+    public List<Offer> getTheCheapestAndMostExpensiveOffer(String city) {
+        return offerRepository.findAll().stream()
+                .filter(offer -> offer.getCity().getName().equalsIgnoreCase(city))
+                .collect(Collectors.toList());
+    }
+
 }
