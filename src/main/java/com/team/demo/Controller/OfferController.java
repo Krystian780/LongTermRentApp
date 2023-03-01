@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 public class OfferController {
+
     @Autowired
     private OfferService offerRepository;
 
@@ -25,7 +26,7 @@ public class OfferController {
     }
 
     @RequestMapping(value = "/offers", produces = "application/json")
-    public List<Offer> getOffers() {
+    public List<Offer> getOffers()git  {
         return offerRepository.getOffers();
     }
 
