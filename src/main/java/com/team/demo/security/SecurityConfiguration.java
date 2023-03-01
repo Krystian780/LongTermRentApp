@@ -1,5 +1,3 @@
-/*
-
 package com.team.demo.security;
 
 import org.springframework.context.annotation.Bean;
@@ -9,7 +7,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 @EnableWebSecurity
-public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
+public class SpringSecurityConfig {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -33,4 +31,3 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 }
 
-*/
