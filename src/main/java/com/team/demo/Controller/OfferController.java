@@ -26,7 +26,7 @@ public class OfferController {
     }
 
     @RequestMapping(value = "/offers", produces = "application/json")
-    public List<Offer> getOffers()git  {
+    public List<Offer> getOffers() {
         return offerRepository.getOffers();
     }
 

@@ -11,11 +11,10 @@ import lombok.NoArgsConstructor;
 @Entity
 @Builder
 @Data
-public class Review {
+public class Amenity {
     @Id
     @GeneratedValue(strategy= GenerationType.SEQUENCE)
     private int id;
-    private String review;
-    private int mark;
+    private String amenity;
 
 }

@@ -25,8 +25,7 @@ public class OfferService {
     public List<Offer> getOffers() {
         return offerRepository.findAll();
     }
-
-
+    
     public List<City> getCities() {
         return offerRepository.findAll().stream()
                 .map(Offer::getCity)
@@ -38,6 +37,8 @@ public class OfferService {
                 .filter(offer -> offer.getCity().getName().equalsIgnoreCase(city))
                 .collect(Collectors.toList());
     }
+
+
 
     public List<Offer> getTheCheapestAndMostExpensiveOffer(String city) {
         return offerRepository.findAll().stream()
