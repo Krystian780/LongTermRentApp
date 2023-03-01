@@ -8,8 +8,6 @@ import java.util.List;
 public class TestingObjectCreator {
     List<Offer> offers = new ArrayList<>();
 
-
-
     public Offer getFirstOffers(){
         City krakow = City.builder()
                 .id(1)
@@ -17,31 +15,27 @@ public class TestingObjectCreator {
                 .name("Krakow")
                 .build();
 
-        Review firstReview = Review.builder()
+        Amenity firstAmenity = Amenity.builder()
                 .id(1)
-                .review("Nice room")
-                .mark(5)
+                .amenity("WIFI")
                 .build();
 
-        Review secondReview = Review.builder()
+        Amenity secondAmenity = Amenity.builder()
                 .id(1)
-                .review("Nice room, fast WIFI")
-                .mark(4)
+                .amenity("WIFI")
                 .build();
 
-        Review thirdReview = Review.builder()
+        Amenity thirdAmenity = Amenity.builder()
                 .id(1)
-                .review("Nice room, bad smell")
-                .mark(3)
+                .amenity("WIFI")
                 .build();
 
-        Review fourthReview = Review.builder()
+        Amenity fourthAmenity = Amenity.builder()
                 .id(1)
-                .review("Nice room, quiet neighbourhood")
-                .mark(5)
+                .amenity("WIFI")
                 .build();
 
-        List<Review> reviews = new ArrayList<>(List.of(firstReview, secondReview, thirdReview, fourthReview));
+        List<Amenity> amenities = new ArrayList<>(List.of(firstAmenity, secondAmenity, thirdAmenity, fourthAmenity));
 
         Description description = Description.builder()
                 .id(1)
@@ -55,7 +49,7 @@ public class TestingObjectCreator {
                 .offerName("Apartment in Gdansk")
                 .description(description)
                 .city(krakow)
-                .reviewList(reviews)
+                .amenities(amenities)
                 .build();
     }
 
@@ -66,31 +60,27 @@ public class TestingObjectCreator {
                 .name("Krakow")
                 .build();
 
-        Review firstReview = Review.builder()
+        Amenity firstAmenity = Amenity.builder()
                 .id(1)
-                .review("Cozy room")
-                .mark(5)
+                .amenity("WIFI")
                 .build();
 
-        Review secondReview = Review.builder()
+        Amenity secondAmenity = Amenity.builder()
                 .id(1)
-                .review("The best amentities")
-                .mark(4)
+                .amenity("WIFI")
                 .build();
 
-        Review thirdReview = Review.builder()
+        Amenity thirdAmenity = Amenity.builder()
                 .id(1)
-                .review("Smaller than on the picture")
-                .mark(3)
+                .amenity("WIFI")
                 .build();
 
-        Review fourthReview = Review.builder()
+        Amenity fourthAmenity = Amenity.builder()
                 .id(1)
-                .review("Weird neighbours")
-                .mark(5)
+                .amenity("WIFI")
                 .build();
 
-        List<Review> reviews = new ArrayList<>(List.of(firstReview, secondReview, thirdReview, fourthReview));
+        List<Amenity> reviews = new ArrayList<>(List.of(firstAmenity, secondAmenity, thirdAmenity, fourthAmenity));
 
         Description description = Description.builder()
                 .id(1)
@@ -114,31 +104,27 @@ public class TestingObjectCreator {
                 .name("Warszawa")
                 .build();
 
-        Review firstReview = Review.builder()
+        Amenity firstAmenity = Amenity.builder()
                 .id(1)
-                .review("Big Bed ! I Like it !")
-                .mark(5)
+                .amenity("WIFI")
                 .build();
 
-        Review secondReview = Review.builder()
+        Amenity secondSecond = Amenity.builder()
                 .id(1)
-                .review("The best amentities, no info about animals")
-                .mark(4)
+                .amenity("WIFI")
                 .build();
 
-        Review thirdReview = Review.builder()
+        Amenity thirdAmenity = Amenity.builder()
                 .id(1)
-                .review("Smaller than on the picture")
-                .mark(2)
+                .amenity("WIFI")
                 .build();
 
-        Review fourthReview = Review.builder()
+        Amenity fourthAmenity = Amenity.builder()
                 .id(1)
-                .review("Weird neighbours")
-                .mark(5)
+                .amenity("WIFI")
                 .build();
 
-        List<Review> reviews = new ArrayList<>(List.of(firstReview, secondReview, thirdReview, fourthReview));
+        List<Amenity> amenities = new ArrayList<>(List.of(firstAmenity, secondSecond, thirdAmenity, fourthAmenity));
 
         Description description = Description.builder()
                 .id(1)
@@ -152,7 +138,7 @@ public class TestingObjectCreator {
                 .offerName("Cozy Room in Warsaw")
                 .description(description)
                 .city(krakow)
-                .reviewList(reviews)
+                .amenities(amenities)
                 .build();
     }
 
@@ -163,31 +149,27 @@ public class TestingObjectCreator {
                 .name("Warszawa")
                 .build();
 
-        Review firstReview = Review.builder()
+        Amenity firstAmenity = Amenity.builder()
                 .id(1)
-                .review("Very Clean")
-                .mark(5)
+                .amenity("WIFI")
                 .build();
 
-        Review secondReview = Review.builder()
+        Amenity secondAmenity = Amenity.builder()
                 .id(1)
-                .review("Could be more cleaner, but overall really nice")
-                .mark(4)
+                .amenity("WIFI")
                 .build();
 
-        Review thirdReview = Review.builder()
+        Amenity thirdAmenity = Amenity.builder()
                 .id(1)
-                .review("Refrigerator didn't work, had to eat outside everyday")
-                .mark(2)
+                .amenity("WIFI")
                 .build();
 
-        Review fourthReview = Review.builder()
+        Amenity fourthAmenity = Amenity.builder()
                 .id(1)
-                .review("NoisyNeighbours")
-                .mark(5)
+                .amenity("WIFI")
                 .build();
 
-        List<Review> reviews = new ArrayList<>(List.of(firstReview, secondReview, thirdReview, fourthReview));
+        List<Amenity> amenities = new ArrayList<>(List.of(firstAmenity, secondAmenity, thirdAmenity, fourthAmenity));
 
         Description description = Description.builder()
                 .id(1)
@@ -201,7 +183,7 @@ public class TestingObjectCreator {
                 .offerName("Big room in Old Town Warsaw")
                 .description(description)
                 .city(krakow)
-                .reviewList(reviews)
+                .amenities(amenities)
                 .build();
     }
 
