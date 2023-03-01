@@ -1,8 +1,5 @@
-/*package com.team.demo.security;
+package com.team.demo.security;
 
-import com.team.demo.Repository.UserRepository;
-import com.team.demo.Service.UserService;
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,7 +7,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.annotation.Id;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -29,14 +25,9 @@ public class UserData implements UserDetails {
     private Integer id;
     private String login;
     private String password;
-    @Column(name = "password_token")
     private String passwordToken;
-    @Column(name = "is_Authorized")
     private boolean isAuthorized;
-    @Column(name = "is_Locked")
     private boolean isLocked = false;
-    @Autowired
-    UserService userService;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -46,16 +37,18 @@ public class UserData implements UserDetails {
     }
 
     @Override
+    public String getPassword() {
+        return password;
+    }
+
+    @Override
     public String getUsername() {
-        return getLogin();
+        return login;
     }
 
     @Override
     public boolean isAccountNonExpired() {
-        if(userService.getUser(login)!=null){
-            return true;
-        }
-        return false;
+        return true;
     }
 
     @Override
@@ -73,4 +66,3 @@ public class UserData implements UserDetails {
         return true;
     }
 }
-*/
