@@ -1,4 +1,4 @@
-package com.team.demo.security;
+/*package com.team.demo.security;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -11,3 +11,6 @@ public interface CustomUserDetailsService extends UserDetailsService {
 
     void createUser(String login, String password) throws NoSuchAlgorithmException, LoginException;
 }
+
+
+ */

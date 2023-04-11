@@ -12,11 +12,12 @@ import lombok.NoArgsConstructor;
 @Builder
 @Data
 public class Description {
+
     @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE)
     private int id;
     private int price;
+    private String title;
     private String objectDescription;
-    private String amentities;
 
 }

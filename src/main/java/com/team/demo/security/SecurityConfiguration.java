@@ -1,4 +1,4 @@
-package com.team.demo.security;
+/*package com.team.demo.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,4 +21,4 @@ public class SecurityConfiguration {
     }
 
 }
-
+*/

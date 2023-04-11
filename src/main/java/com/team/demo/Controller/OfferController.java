@@ -41,4 +41,16 @@ public class OfferController {
         return offerRepository.getOffersForGivenCity(city);
     }
 
+    @RequestMapping(path="/offers/sorted")
+    @ResponseBody
+    public List<Offer> getOffersSorted(@RequestParam String city){
+        return offerRepository.sortDescendingByPrice(city);
+    }
+
+    @RequestMapping(path="/offers/")
+    @ResponseBody
+    public List<Offer> getOffersWithMaximumPriceSet(@RequestParam int price){
+        return offerRepository.getOffersWithMaximumPriceSet(price);
+    }
+
 }

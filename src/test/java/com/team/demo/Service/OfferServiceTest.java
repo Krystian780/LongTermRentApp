@@ -24,7 +24,7 @@ class OfferServiceTest {
     OfferService offerService;
 
     @Test
-    public void shouldReturnOfferForGivenCities(){
+    public void shouldReturnOfferForGivenCity(){
         List<Offer> offersInWarsaw = offerService.getOffersForGivenCity("warszawa");
         List<String> citiesFromOffers = offersInWarsaw.stream()
                 .map(Offer::getCity)

@@ -1,20 +1,13 @@
 package com.team.demo.OfferModel;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+public enum Amenity {
+    WIFI("WIFI"),
+    AIR_CONDITIONING("AN_AIR_CONDITIONING");
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Entity
-@Builder
-@Data
-public class Amenity {
-    @Id
-    @GeneratedValue(strategy= GenerationType.SEQUENCE)
-    private int id;
     private String amenity;
+
+    Amenity(String amenity) {
+        this.amenity = amenity;
+    }
 
 }

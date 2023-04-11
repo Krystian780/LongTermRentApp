@@ -6,6 +6,8 @@ import com.team.demo.Repository.OfferRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -15,6 +17,7 @@ public class OfferService {
     private OfferRepository offerRepository;
 
     public void addOffer(Offer offer) {
+        offer.setLocalDate(LocalDate.now());
         offerRepository.save(offer);
     }
 
@@ -38,11 +41,15 @@ public class OfferService {
                 .collect(Collectors.toList());
     }
 
+    public List<Offer> sortDescendingByPrice(String city) {
+        return getOffersForGivenCity(city).stream()
+                .sorted(Comparator.comparing(offer -> offer.getDescription().getPrice()))
+                .collect(Collectors.toList());
+    }
 
-
-    public List<Offer> getTheCheapestAndMostExpensiveOffer(String city) {
+    public List<Offer> getOffersWithMaximumPriceSet(int price) {
         return offerRepository.findAll().stream()
-                .filter(offer -> offer.getCity().getName().equalsIgnoreCase(city))
+                .filter(offer -> offer.getDescription().getPrice()<=price)
                 .collect(Collectors.toList());
     }
 
