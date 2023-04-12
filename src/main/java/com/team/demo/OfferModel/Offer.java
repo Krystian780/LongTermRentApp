@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -26,7 +27,7 @@ public class Offer {
     private City city;
     @OneToOne
     private UserData userData;
-    @Enumerated
-    Amenity amenity;
+    @OneToMany
+    private List<Amenity> amenities;
 
 }

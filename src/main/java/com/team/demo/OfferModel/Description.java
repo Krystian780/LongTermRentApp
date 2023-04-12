@@ -17,7 +17,6 @@ public class Description {
     @GeneratedValue(strategy=GenerationType.SEQUENCE)
     private int id;
     private int price;
-    private String title;
     private String objectDescription;
 
 }
