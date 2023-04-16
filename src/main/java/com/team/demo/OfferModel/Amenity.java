@@ -11,5 +11,4 @@ public enum Amenity {
     Amenity(String amenity) {
         this.amenity = amenity;
     }
-
 }

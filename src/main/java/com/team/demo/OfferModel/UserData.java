@@ -23,8 +23,8 @@ public class UserData implements UserDetails {
     @Column(unique = true)
     private String login;
     private String password;
-    private String passwordToken;
-    private boolean isAuthorized;
+    private String passwordToken = "password";
+    private boolean isAuthorized = true;
     private boolean isLocked = false;
 
     @Override

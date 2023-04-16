@@ -25,9 +25,11 @@ public class Offer {
     private Description description;
     @OneToOne(cascade = CascadeType.ALL, targetEntity = City.class)
     private City city;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL, targetEntity = UserData.class)
     private UserData userData;
-    @OneToMany
+    @ElementCollection(targetClass = Amenity.class)
+    @CollectionTable
+    @Enumerated(EnumType.STRING)
     private List<Amenity> amenities;
 
 }

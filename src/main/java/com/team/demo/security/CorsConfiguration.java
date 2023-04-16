@@ -1,4 +1,4 @@
-package com.team.demo.configuration;
+package com.team.demo.security;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

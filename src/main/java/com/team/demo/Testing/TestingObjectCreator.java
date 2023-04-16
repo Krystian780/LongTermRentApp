@@ -1,5 +1,6 @@
 package com.team.demo.Testing;
 
+
 import com.team.demo.OfferModel.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -81,8 +82,8 @@ public class TestingObjectCreator {
                 .build();
 
         return Offer.builder()
-                .id(1)
-                .offerName("Small Room but nice view in Warsaw")
+                .id(3)
+                .offerName("Small Room but nice view")
                 .description(description)
                 .city(krakow)
                 .amenities(amenities)
@@ -93,7 +94,7 @@ public class TestingObjectCreator {
         City krakow = City.builder()
                 .id(1)
                 .province("Malopolskiee")
-                .name("Warszawa")
+                .name("Krakow")
                 .build();
 
         List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
@@ -104,22 +105,48 @@ public class TestingObjectCreator {
         Description description = Description.builder()
                 .id(1)
                 .objectDescription("someDescription")
-                .price(1200)
+                .price(2000)
                 .build();
 
         return Offer.builder()
-                .id(1)
-                .offerName("Big room in Old Town Warsaw")
+                .id(4)
+                .offerName("Big room in Old Town Cracow")
                 .description(description)
                 .city(krakow)
                 .amenities(amenities)
                 .build();
     }
 
-    public Offer getFifthOffer(){
+    public Offer generateFifthOffer(){
         City krakow = City.builder()
                 .id(1)
-                .province("Malopolskiee")
+                .province("Malopolskie")
+                .name("Krakow")
+                .build();
+
+        List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
+                Amenity.GARAGE,
+                Amenity.AIR_CONDITIONING));
+
+        Description description = Description.builder()
+                .id(1)
+                .objectDescription("someDescription")
+                .price(1300)
+                .build();
+
+        return Offer.builder()
+                .id(5)
+                .offerName("Big room in Old Town Cracow")
+                .description(description)
+                .city(krakow)
+                .amenities(amenities)
+                .build();
+    }
+
+    public Offer generateSixthOffer(){
+        City krakow = City.builder()
+                .id(1)
+                .province("Mazowieckie")
                 .name("Warszawa")
                 .build();
 
@@ -134,7 +161,7 @@ public class TestingObjectCreator {
                 .build();
 
         return Offer.builder()
-                .id(1)
+                .id(6)
                 .offerName("Big room in Old Town Warsaw")
                 .description(description)
                 .city(krakow)
@@ -142,10 +169,62 @@ public class TestingObjectCreator {
                 .build();
     }
 
-    public Offer getSixthOffer(){
+    public Offer generateSeventhOffer(){
         City krakow = City.builder()
                 .id(1)
-                .province("Malopolskiee")
+                .province("Mazowieckie")
+                .name("Warszawa")
+                .build();
+
+        List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
+                Amenity.GARAGE,
+                Amenity.AIR_CONDITIONING));
+
+        Description description = Description.builder()
+                .id(1)
+                .objectDescription("someDescription")
+                .price(1400)
+                .build();
+
+        return Offer.builder()
+                .id(7)
+                .offerName("Big room in Old Town Warsaw")
+                .description(description)
+                .city(krakow)
+                .amenities(amenities)
+                .build();
+    }
+
+    public Offer generateEithOffer(){
+        City warszawa = City.builder()
+                .id(1)
+                .province("Mazowieckie")
+                .name("Warszawa")
+                .build();
+
+        List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
+                Amenity.GARAGE,
+                Amenity.AIR_CONDITIONING));
+
+        Description description = Description.builder()
+                .id(1)
+                .objectDescription("someDescription")
+                .price(1600)
+                .build();
+
+        return Offer.builder()
+                .id(1)
+                .offerName("Big room in Old Town Warsaw")
+                .description(description)
+                .city(warszawa)
+                .amenities(amenities)
+                .build();
+    }
+
+    public Offer generateNineththOffer(){
+        City warszawa = City.builder()
+                .id(1)
+                .province("Mazowieckie")
                 .name("Warszawa")
                 .build();
 
@@ -160,18 +239,18 @@ public class TestingObjectCreator {
                 .build();
 
         return Offer.builder()
-                .id(1)
+                .id(9)
                 .offerName("Big room in Old Town Warsaw")
                 .description(description)
-                .city(krakow)
+                .city(warszawa)
                 .amenities(amenities)
                 .build();
     }
 
-    public Offer getSeventhOffer(){
+    public Offer generateTenthOffer(){
         City krakow = City.builder()
                 .id(1)
-                .province("Malopolskiee")
+                .province("Mazowieckie")
                 .name("Warszawa")
                 .build();
 
@@ -182,89 +261,11 @@ public class TestingObjectCreator {
         Description description = Description.builder()
                 .id(1)
                 .objectDescription("someDescription")
-                .price(1200)
+                .price(1700)
                 .build();
 
         return Offer.builder()
-                .id(1)
-                .offerName("Big room in Old Town Warsaw")
-                .description(description)
-                .city(krakow)
-                .amenities(amenities)
-                .build();
-    }
-
-    public Offer getEithOffer(){
-        City krakow = City.builder()
-                .id(1)
-                .province("Malopolskiee")
-                .name("Warszawa")
-                .build();
-
-        List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
-                Amenity.GARAGE,
-                Amenity.AIR_CONDITIONING));
-
-        Description description = Description.builder()
-                .id(1)
-                .objectDescription("someDescription")
-                .price(1200)
-                .build();
-
-        return Offer.builder()
-                .id(1)
-                .offerName("Big room in Old Town Warsaw")
-                .description(description)
-                .city(krakow)
-                .amenities(amenities)
-                .build();
-    }
-
-    public Offer getNineththOffer(){
-        City krakow = City.builder()
-                .id(1)
-                .province("Malopolskiee")
-                .name("Warszawa")
-                .build();
-
-        List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
-                Amenity.GARAGE,
-                Amenity.AIR_CONDITIONING));
-
-        Description description = Description.builder()
-                .id(1)
-                .objectDescription("someDescription")
-                .price(1200)
-                .build();
-
-        return Offer.builder()
-                .id(1)
-                .offerName("Big room in Old Town Warsaw")
-                .description(description)
-                .city(krakow)
-                .amenities(amenities)
-                .build();
-    }
-
-    public Offer getTenthhOffer(){
-        City krakow = City.builder()
-                .id(1)
-                .province("Malopolskiee")
-                .name("Warszawa")
-                .build();
-
-        List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
-                Amenity.GARAGE,
-                Amenity.AIR_CONDITIONING));
-
-        Description description = Description.builder()
-                .id(1)
-                .objectDescription("someDescription")
-                .price(1200)
-                .build();
-
-        return Offer.builder()
-                .id(1)
+                .id(10)
                 .offerName("Big room in Old Town Warsaw")
                 .description(description)
                 .city(krakow)
@@ -275,8 +276,8 @@ public class TestingObjectCreator {
     public Offer generateEleventhOffer(){
         City krakow = City.builder()
                 .id(1)
-                .name("Krakow")
-                .province("Malopolskie")
+                .name("Warszawa")
+                .province("Mazowieckie")
                 .build();
 
         List<Amenity> amenities = new ArrayList<>(List.of(
@@ -292,8 +293,8 @@ public class TestingObjectCreator {
                 .build();
 
         return Offer.builder()
-                .id(1)
-                .offerName("Apartment in Cracow")
+                .id(11)
+                .offerName("Apartment in Warsaw")
                 .description(description)
                 .city(krakow)
                 .amenities(amenities)
@@ -303,8 +304,8 @@ public class TestingObjectCreator {
     public Offer generateTwelvethOffer(){
         City krakow = City.builder()
                 .id(1)
-                .province("Malopolskie")
-                .name("Krakow")
+                .province("Slaskie")
+                .name("Katowice")
                 .build();
 
         List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
@@ -315,12 +316,12 @@ public class TestingObjectCreator {
         Description description = Description.builder()
                 .id(1)
                 .objectDescription("someDescription")
-                .price(1100)
+                .price(900)
                 .build();
 
         return Offer.builder()
-                .id(1)
-                .offerName("Cozy Apartment in Cracow")
+                .id(12)
+                .offerName("Cozy Apartment in Katowice")
                 .description(description)
                 .city(krakow)
                 .build();
@@ -329,8 +330,8 @@ public class TestingObjectCreator {
     public Offer generateThirteenthOffer(){
         City krakow = City.builder()
                 .id(1)
-                .province("Mazowieckie")
-                .name("Warszawa")
+                .province("Slaskie")
+                .name("Katowice")
                 .build();
 
 
@@ -342,23 +343,23 @@ public class TestingObjectCreator {
         Description description = Description.builder()
                 .id(1)
                 .objectDescription("someDescription")
-                .price(1500)
+                .price(1000)
                 .build();
 
         return Offer.builder()
                 .id(1)
-                .offerName("Small Room but nice view in Warsaw")
+                .offerName("Small Room but nice view")
                 .description(description)
                 .city(krakow)
                 .amenities(amenities)
                 .build();
     }
 
-    public Offer getFourteenthOffer(){
+    public Offer generateFourteenthOffer(){
         City krakow = City.builder()
                 .id(1)
-                .province("Malopolskiee")
-                .name("Warszawa")
+                .province("Slaskie")
+                .name("Katowice")
                 .build();
 
         List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
@@ -373,19 +374,45 @@ public class TestingObjectCreator {
                 .build();
 
         return Offer.builder()
-                .id(1)
-                .offerName("Big room in Old Town Warsaw")
+                .id(14)
+                .offerName("Big room near market square")
                 .description(description)
                 .city(krakow)
                 .amenities(amenities)
                 .build();
     }
 
-    public Offer getFifteenthOffer(){
+    public Offer generateFifteenthOffer(){
         City krakow = City.builder()
                 .id(1)
-                .province("Malopolskiee")
-                .name("Warszawa")
+                .province("Slaskie")
+                .name("Katowice")
+                .build();
+
+        List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
+                Amenity.GARAGE,
+                Amenity.AIR_CONDITIONING));
+
+        Description description = Description.builder()
+                .id(1)
+                .objectDescription("someDescription")
+                .price(800)
+                .build();
+
+        return Offer.builder()
+                .id(15)
+                .offerName("Big room near Mariacka street")
+                .description(description)
+                .city(krakow)
+                .amenities(amenities)
+                .build();
+    }
+
+    public Offer generateSixteenthOffer(){
+        City krakow = City.builder()
+                .id(1)
+                .province("Pomorskie")
+                .name("Sopot")
                 .build();
 
         List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
@@ -399,19 +426,19 @@ public class TestingObjectCreator {
                 .build();
 
         return Offer.builder()
-                .id(1)
-                .offerName("Big room in Old Town Warsaw")
+                .id(16)
+                .offerName("Cozy Room facing the see")
                 .description(description)
                 .city(krakow)
                 .amenities(amenities)
                 .build();
     }
 
-    public Offer getSixteenthOffer(){
+    public Offer generateSeventeenthOffer(){
         City krakow = City.builder()
                 .id(1)
-                .province("Malopolskiee")
-                .name("Warszawa")
+                .province("Pomorskie")
+                .name("Sopot")
                 .build();
 
         List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
@@ -425,19 +452,19 @@ public class TestingObjectCreator {
                 .build();
 
         return Offer.builder()
-                .id(1)
-                .offerName("Big room in Old Town Warsaw")
+                .id(17)
+                .offerName("Comfortable room in Sopot")
                 .description(description)
                 .city(krakow)
                 .amenities(amenities)
                 .build();
     }
 
-    public Offer getSeventeenthOffer(){
+    public Offer generateEighteenthOffer(){
         City krakow = City.builder()
                 .id(1)
-                .province("Malopolskiee")
-                .name("Warszawa")
+                .province("Pomorskie")
+                .name("Sopot")
                 .build();
 
         List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
@@ -451,19 +478,19 @@ public class TestingObjectCreator {
                 .build();
 
         return Offer.builder()
-                .id(1)
-                .offerName("Big room in Old Town Warsaw")
+                .id(18)
+                .offerName("Room near Monciak")
                 .description(description)
                 .city(krakow)
                 .amenities(amenities)
                 .build();
     }
 
-    public Offer getEiteenthOffer(){
+    public Offer generateNineteenthOffer(){
         City krakow = City.builder()
                 .id(1)
-                .province("Malopolskiee")
-                .name("Warszawa")
+                .province("Pomorskie")
+                .name("Sopot")
                 .build();
 
         List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
@@ -473,23 +500,23 @@ public class TestingObjectCreator {
         Description description = Description.builder()
                 .id(1)
                 .objectDescription("someDescription")
-                .price(1200)
+                .price(2000)
                 .build();
 
         return Offer.builder()
-                .id(1)
-                .offerName("Big room in Old Town Warsaw")
+                .id(19)
+                .offerName("Big Room with view on the sea")
                 .description(description)
                 .city(krakow)
                 .amenities(amenities)
                 .build();
     }
 
-    public Offer getNineteenthOffer(){
+    public Offer generateTwentiethOffer(){
         City krakow = City.builder()
                 .id(1)
-                .province("Malopolskiee")
-                .name("Warszawa")
+                .province("Pomorskie")
+                .name("Sopot")
                 .build();
 
         List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
@@ -499,38 +526,12 @@ public class TestingObjectCreator {
         Description description = Description.builder()
                 .id(1)
                 .objectDescription("someDescription")
-                .price(1200)
+                .price(800)
                 .build();
 
         return Offer.builder()
-                .id(1)
-                .offerName("Big room in Old Town Warsaw")
-                .description(description)
-                .city(krakow)
-                .amenities(amenities)
-                .build();
-    }
-
-    public Offer getTwentiethOffer(){
-        City krakow = City.builder()
-                .id(1)
-                .province("Malopolskiee")
-                .name("Warszawa")
-                .build();
-
-        List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
-                Amenity.GARAGE,
-                Amenity.AIR_CONDITIONING));
-
-        Description description = Description.builder()
-                .id(1)
-                .objectDescription("someDescription")
-                .price(1200)
-                .build();
-
-        return Offer.builder()
-                .id(1)
-                .offerName("Big room in Old Town Warsaw")
+                .id(20)
+                .offerName("Cozy room 3 km from the center")
                 .description(description)
                 .city(krakow)
                 .amenities(amenities)
@@ -538,7 +539,11 @@ public class TestingObjectCreator {
     }
 
     public List<Offer> getOffers(){
-        return new ArrayList<>(List.of(generateFirstOffer(), generateSecondOffer(), generateThirdOffer(), getFourthOffer()));
+        return new ArrayList<>(List.of(generateFirstOffer(), generateSecondOffer(), generateThirdOffer(),
+                getFourthOffer(), generateFifthOffer(), generateSixthOffer(), generateEighteenthOffer(), generateNineththOffer(),
+                generateTenthOffer(), generateEleventhOffer(), generateTwelvethOffer(), generateThirteenthOffer(),
+                generateFourteenthOffer(), generateFifteenthOffer(), generateSixteenthOffer(), generateSeventeenthOffer(),
+                generateEighteenthOffer(), generateNineteenthOffer(), generateTwentiethOffer()));
     }
 
 }
