@@ -1,4 +1,4 @@
-package com.team.demo.OfferModel;
+package com.team.demo.UserDataModel;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

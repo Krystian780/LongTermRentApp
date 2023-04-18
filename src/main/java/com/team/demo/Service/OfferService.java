@@ -47,10 +47,12 @@ public class OfferService {
                 .collect(Collectors.toList());
     }
 
-    public List<Offer> getOffersWithMaximumPriceSet(int price) {
+    public List<Offer> getOffersWithMaximumPriceSetByUser(int price) {
         return offerRepository.findAll().stream()
                 .filter(offer -> offer.getDescription().getPrice()<=price)
                 .collect(Collectors.toList());
     }
+
+
 
 }

@@ -1,5 +1,6 @@
 package com.team.demo.OfferModel;
 
+import com.team.demo.UserDataModel.UserData;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

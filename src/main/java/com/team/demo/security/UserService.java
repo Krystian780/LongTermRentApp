@@ -1,8 +1,7 @@
-/*package com.team.demo.Service;
+package com.team.demo.security;
 
-
+import com.team.demo.UserDataModel.UserData;
 import com.team.demo.Repository.UserRepository;
-import com.team.demo.OfferModel.UserData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,4 +23,3 @@ public class UserService {
     }
     
 }
-*/

@@ -31,9 +31,17 @@ class OfferServiceTest {
                 .map(City::getName)
                 .collect(Collectors.toList());
         Set<String> distinctCitiesNameFromObtainedOffer = new HashSet<>(citiesFromOffers);
-        int size = distinctCitiesNameFromObtainedOffer.size();
-        assertEquals(size, 1);
+        int amountOfReturnedCities = distinctCitiesNameFromObtainedOffer.size();
+        assertEquals(amountOfReturnedCities, 1);
         assertTrue(distinctCitiesNameFromObtainedOffer.contains("warszawa"));
+    }
+
+    @Test
+    public void shouldReturnAllCities(){
+        List<String> allCities = offerService.getCities()
+                .stream().map(city -> city.getName().toLowerCase())
+                .collect(Collectors.toList());
+
     }
 
 }

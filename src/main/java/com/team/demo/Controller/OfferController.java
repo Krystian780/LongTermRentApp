@@ -50,7 +50,7 @@ public class OfferController {
     @RequestMapping(path="/offers/")
     @ResponseBody
     public List<Offer> getOffersWithMaximumPriceSet(@RequestParam int price){
-        return offerRepository.getOffersWithMaximumPriceSet(price);
+        return offerRepository.getOffersWithMaximumPriceSetByUser(price);
     }
 
 }
