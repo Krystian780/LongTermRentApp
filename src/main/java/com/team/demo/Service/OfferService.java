@@ -41,6 +41,12 @@ public class OfferService {
                 .collect(Collectors.toList());
     }
 
+    public List<Offer> getOffersForGivenCityTestWithouDatabase(List<Offer> offers, String city) {
+        return offers.stream()
+                .filter(offer -> offer.getCity().getName().equalsIgnoreCase(city))
+                .collect(Collectors.toList());
+    }
+
     public List<Offer> sortDescendingByPrice(String city) {
         return getOffersForGivenCity(city).stream()
                 .sorted(Comparator.comparing(offer -> offer.getDescription().getPrice()))
