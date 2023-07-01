@@ -14,43 +14,43 @@ import java.util.List;
 public class OfferController {
 
     @Autowired
-    private OfferService offerRepository;
+    private OfferService offerService;
 
     //@Autowired
    // private UserService userService;
 
     @PostMapping("/offer/add")
     public Offer addOffer(@RequestBody Offer offer) {
-        offerRepository.addOffer(offer);
+        offerService.addOffer(offer);
         return offer;
     }
 
     @RequestMapping(value = "/offers", produces = "application/json")
     public List<Offer> getOffers() {
-        return offerRepository.getOffers();
+        return offerService.getOffers();
     }
 
     @RequestMapping(value = "/cities", produces = "application/json")
     public List<City> getCities() {
-        return offerRepository.getCities();
+        return offerService.getCities();
     }
 
     @RequestMapping(path="/offers/cities")
     @ResponseBody
     public List<Offer> offers(@RequestParam String city){
-        return offerRepository.getOffersForGivenCity(city);
+        return offerService.getOffersForGivenCity(city);
     }
 
     @RequestMapping(path="/offers/sorted")
     @ResponseBody
     public List<Offer> getOffersSorted(@RequestParam String city){
-        return offerRepository.sortDescendingByPrice(city);
+        return offerService.sortDescendingByPrice(city);
     }
 
     @RequestMapping(path="/offers/")
     @ResponseBody
     public List<Offer> getOffersWithMaximumPriceSet(@RequestParam int price){
-        return offerRepository.getOffersWithMaximumPriceSetByUser(price);
+        return offerService.getOffersWithMaximumPriceSetByUser(price);
     }
 
 }

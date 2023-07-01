@@ -1,11 +1,15 @@
 package com.team.demo.Testing;
 
 import com.team.demo.OfferModel.*;
+import org.springframework.stereotype.Repository;
+
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class TestingObjectCreator {
-    List<Offer> offers = new ArrayList<>();
+    private List<Offer> offers = new ArrayList<>();
 
     public Offer generateFirstOffer(){
         City krakow = City.builder()
@@ -28,7 +32,8 @@ public class TestingObjectCreator {
 
         return Offer.builder()
                 .id(1)
-                .offerName("Apartment in Cracow")
+                .localDate(LocalDate.now())
+                .offerName("Room in Cracow")
                 .description(description)
                 .city(krakow)
                 .amenities(amenities)
@@ -55,6 +60,7 @@ public class TestingObjectCreator {
 
         return Offer.builder()
                 .id(1)
+                .localDate(LocalDate.now())
                 .offerName("Cozy Apartment in Cracow")
                 .description(description)
                 .city(krakow)
@@ -64,10 +70,9 @@ public class TestingObjectCreator {
     public Offer generateThirdOffer(){
         City krakow = City.builder()
                 .id(1)
-                .province("Mazowieckie")
-                .name("Warszawa")
+                .province("Malopolskie")
+                .name("Krakow")
                 .build();
-
 
         List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
                 Amenity.GARAGE,
@@ -82,7 +87,8 @@ public class TestingObjectCreator {
 
         return Offer.builder()
                 .id(3)
-                .offerName("Small Room but nice view")
+                .localDate(LocalDate.now())
+                .offerName("Small Room in a quiet area")
                 .description(description)
                 .city(krakow)
                 .amenities(amenities)
@@ -109,6 +115,7 @@ public class TestingObjectCreator {
 
         return Offer.builder()
                 .id(4)
+                .localDate(LocalDate.now())
                 .offerName("Big room in Old Town Cracow")
                 .description(description)
                 .city(krakow)
@@ -135,6 +142,7 @@ public class TestingObjectCreator {
 
         return Offer.builder()
                 .id(5)
+                .localDate(LocalDate.now())
                 .offerName("Big room in Old Town Cracow")
                 .description(description)
                 .city(krakow)
@@ -161,6 +169,7 @@ public class TestingObjectCreator {
 
         return Offer.builder()
                 .id(6)
+                .localDate(LocalDate.now())
                 .offerName("Big room in Old Town Warsaw")
                 .description(description)
                 .city(krakow)
@@ -187,6 +196,7 @@ public class TestingObjectCreator {
 
         return Offer.builder()
                 .id(7)
+                .localDate(LocalDate.now())
                 .offerName("Big room in Old Town Warsaw")
                 .description(description)
                 .city(krakow)
@@ -194,7 +204,7 @@ public class TestingObjectCreator {
                 .build();
     }
 
-    public Offer generateEithOffer(){
+    public Offer generateEightOffer(){
         City warszawa = City.builder()
                 .id(1)
                 .province("Mazowieckie")
@@ -212,7 +222,8 @@ public class TestingObjectCreator {
                 .build();
 
         return Offer.builder()
-                .id(1)
+                .id(8)
+                .localDate(LocalDate.now())
                 .offerName("Big room in Old Town Warsaw")
                 .description(description)
                 .city(warszawa)
@@ -239,7 +250,8 @@ public class TestingObjectCreator {
 
         return Offer.builder()
                 .id(9)
-                .offerName("Big room in Old Town Warsaw")
+                .localDate(LocalDate.now())
+                .offerName("Room Close to Palac Kultury")
                 .description(description)
                 .city(warszawa)
                 .amenities(amenities)
@@ -265,7 +277,8 @@ public class TestingObjectCreator {
 
         return Offer.builder()
                 .id(10)
-                .offerName("Big room in Old Town Warsaw")
+                .localDate(LocalDate.now())
+                .offerName("Warsaw Room")
                 .description(description)
                 .city(krakow)
                 .amenities(amenities)
@@ -293,6 +306,7 @@ public class TestingObjectCreator {
 
         return Offer.builder()
                 .id(11)
+                .localDate(LocalDate.now())
                 .offerName("Apartment in Warsaw")
                 .description(description)
                 .city(krakow)
@@ -320,7 +334,8 @@ public class TestingObjectCreator {
 
         return Offer.builder()
                 .id(12)
-                .offerName("Cozy Apartment in Katowice")
+                .localDate(LocalDate.now())
+                .offerName("Cozy Room in Katowice")
                 .description(description)
                 .city(krakow)
                 .build();
@@ -332,7 +347,6 @@ public class TestingObjectCreator {
                 .province("Slaskie")
                 .name("Katowice")
                 .build();
-
 
         List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
                 Amenity.GARAGE,
@@ -346,8 +360,9 @@ public class TestingObjectCreator {
                 .build();
 
         return Offer.builder()
-                .id(1)
-                .offerName("Small Room but nice view")
+                .id(13)
+                .localDate(LocalDate.now())
+                .offerName("Small Room but quiet area near city centre")
                 .description(description)
                 .city(krakow)
                 .amenities(amenities)
@@ -374,7 +389,8 @@ public class TestingObjectCreator {
 
         return Offer.builder()
                 .id(14)
-                .offerName("Big room near market square")
+                .localDate(LocalDate.now())
+                .offerName("Near market square")
                 .description(description)
                 .city(krakow)
                 .amenities(amenities)
@@ -400,6 +416,7 @@ public class TestingObjectCreator {
 
         return Offer.builder()
                 .id(15)
+                .localDate(LocalDate.now())
                 .offerName("Big room near Mariacka street")
                 .description(description)
                 .city(krakow)
@@ -426,6 +443,7 @@ public class TestingObjectCreator {
 
         return Offer.builder()
                 .id(16)
+                .localDate(LocalDate.now())
                 .offerName("Cozy Room facing the see")
                 .description(description)
                 .city(krakow)
@@ -447,11 +465,12 @@ public class TestingObjectCreator {
         Description description = Description.builder()
                 .id(1)
                 .objectDescription("someDescription")
-                .price(1200)
+                .price(1300)
                 .build();
 
         return Offer.builder()
                 .id(17)
+                .localDate(LocalDate.now())
                 .offerName("Comfortable room in Sopot")
                 .description(description)
                 .city(krakow)
@@ -473,11 +492,12 @@ public class TestingObjectCreator {
         Description description = Description.builder()
                 .id(1)
                 .objectDescription("someDescription")
-                .price(1200)
+                .price(1400)
                 .build();
 
         return Offer.builder()
                 .id(18)
+                .localDate(LocalDate.now())
                 .offerName("Room near Monciak")
                 .description(description)
                 .city(krakow)
@@ -504,6 +524,7 @@ public class TestingObjectCreator {
 
         return Offer.builder()
                 .id(19)
+                .localDate(LocalDate.now())
                 .offerName("Big Room with view on the sea")
                 .description(description)
                 .city(krakow)
@@ -530,16 +551,21 @@ public class TestingObjectCreator {
 
         return Offer.builder()
                 .id(20)
-                .offerName("Cozy room 3 km from the center")
+                .localDate(LocalDate.now())
+                .offerName("Small but cozy room 3 km from the center")
                 .description(description)
                 .city(krakow)
                 .amenities(amenities)
                 .build();
     }
 
+    public void addOffer(Offer offer){
+        offers.add(offer);
+    }
+
     public List<Offer> getOffers(){
         return new ArrayList<>(List.of(generateFirstOffer(), generateSecondOffer(), generateThirdOffer(),
-                getFourthOffer(), generateFifthOffer(), generateSixthOffer(), generateEighteenthOffer(), generateNineththOffer(),
+                getFourthOffer(), generateFifthOffer(), generateSixthOffer(), generateSeventhOffer(), generateEightOffer(), generateNineththOffer(),
                 generateTenthOffer(), generateEleventhOffer(), generateTwelvethOffer(), generateThirteenthOffer(),
                 generateFourteenthOffer(), generateFifteenthOffer(), generateSixteenthOffer(), generateSeventeenthOffer(),
                 generateEighteenthOffer(), generateNineteenthOffer(), generateTwentiethOffer()));

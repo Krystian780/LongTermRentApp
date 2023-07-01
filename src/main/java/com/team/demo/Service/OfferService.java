@@ -3,6 +3,7 @@ package com.team.demo.Service;
 import com.team.demo.OfferModel.City;
 import com.team.demo.OfferModel.Offer;
 import com.team.demo.Repository.OfferRepository;
+import com.team.demo.Testing.TestingObjectCreator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,8 +14,11 @@ import java.util.stream.Collectors;
 
 @Service
 public class OfferService {
+
     @Autowired
     private OfferRepository offerRepository;
+    @Autowired
+    private TestingObjectCreator testingObjectCreator;
 
     public void addOffer(Offer offer) {
         offer.setLocalDate(LocalDate.now());
@@ -27,6 +31,14 @@ public class OfferService {
 
     public List<Offer> getOffers() {
         return offerRepository.findAll();
+    }
+
+    public List<Offer> getAllTestingOffers(){
+        return testingObjectCreator.getOffers();
+    }
+
+    public void addOfferToTestingList(Offer offer){
+        testingObjectCreator.addOffer(offer);
     }
     
     public List<City> getCities() {
@@ -41,8 +53,8 @@ public class OfferService {
                 .collect(Collectors.toList());
     }
 
-    public List<Offer> getOffersForGivenCityTestWithouDatabase(List<Offer> offers, String city) {
-        return offers.stream()
+    public List<Offer> getOffersForGivenCityTestWithouDatabase(String city) {
+        return getAllTestingOffers().stream()
                 .filter(offer -> offer.getCity().getName().equalsIgnoreCase(city))
                 .collect(Collectors.toList());
     }
@@ -58,7 +70,5 @@ public class OfferService {
                 .filter(offer -> offer.getDescription().getPrice()<=price)
                 .collect(Collectors.toList());
     }
-
-
 
 }

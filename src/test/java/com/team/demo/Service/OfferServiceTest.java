@@ -2,6 +2,7 @@ package com.team.demo.Service;
 
 import com.team.demo.OfferModel.City;
 import com.team.demo.OfferModel.Offer;
+import com.team.demo.Testing.TestingObjectCreator;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,15 +26,16 @@ class OfferServiceTest {
 
     @Test
     public void shouldReturnOfferForGivenCity(){
-        List<Offer> offersInWarsaw = offerService.getOffersForGivenCity("warszawa");
+        List<Offer> offers = new TestingObjectCreator().getOffers();
+        List<Offer> offersInWarsaw = offerService.getOffersForGivenCityTestWithouDatabase("warszawa");
         List<String> citiesFromOffers = offersInWarsaw.stream()
                 .map(Offer::getCity)
                 .map(City::getName)
                 .collect(Collectors.toList());
-        Set<String> distinctCitiesNameFromObtainedOffer = new HashSet<>(citiesFromOffers);
-        int amountOfReturnedCities = distinctCitiesNameFromObtainedOffer.size();
-        assertEquals(amountOfReturnedCities, 1);
-        assertTrue(distinctCitiesNameFromObtainedOffer.contains("warszawa"));
+        Set<String> distinctCitiesNames = new HashSet<>(citiesFromOffers);
+        int amountOfDistinctCities = distinctCitiesNames.size();
+        assertEquals(amountOfDistinctCities, 1);
+        assertTrue(distinctCitiesNames.contains("warszawa"));
     }
 
     @Test
@@ -41,7 +43,9 @@ class OfferServiceTest {
         List<String> allCities = offerService.getCities()
                 .stream().map(city -> city.getName().toLowerCase())
                 .collect(Collectors.toList());
-
+        Set<String> distinctCitiesNames = new HashSet<>(allCities);
+        int amountOfCities = allCities.size();
+        assertEquals(amountOfCities, 3);
     }
 
 }
