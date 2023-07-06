@@ -532,7 +532,7 @@ public class TestingObjectCreator {
                 .build();
     }
 
-    public Offer generateTwentiethOffer(){
+    public Offer generateTwentiethOffer() {
         City krakow = City.builder()
                 .id(1)
                 .province("Pomorskie")
@@ -552,7 +552,276 @@ public class TestingObjectCreator {
         return Offer.builder()
                 .id(20)
                 .localDate(LocalDate.now())
-                .offerName("Small but cozy room 3 km from the center")
+                .offerName("Big Room with view on the sea")
+                .description(description)
+                .city(krakow)
+                .amenities(amenities)
+                .build();
+    }
+
+        public Offer generateTwentyFirst() {
+            City krakow = City.builder()
+                    .id(1)
+                    .province("Pomorskie")
+                    .name("Sopot")
+                    .build();
+
+            List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
+                    Amenity.GARAGE,
+                    Amenity.AIR_CONDITIONING));
+
+            Description description = Description.builder()
+                    .id(1)
+                    .objectDescription("someDescription")
+                    .price(800)
+                    .build();
+
+            return Offer.builder()
+                    .id(21)
+                    .localDate(LocalDate.now())
+                    .offerName("Big Room with view on the sea")
+                    .description(description)
+                    .city(krakow)
+                    .amenities(amenities)
+                    .build();
+        }
+
+    public Offer generateTwentySecond() {
+        City krakow = City.builder()
+                .id(1)
+                .province("Pomorskie")
+                .name("Sopot")
+                .build();
+
+        List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
+                Amenity.GARAGE,
+                Amenity.AIR_CONDITIONING));
+
+        Description description = Description.builder()
+                .id(1)
+                .objectDescription("someDescription")
+                .price(800)
+                .build();
+
+        return Offer.builder()
+                .id(22)
+                .localDate(LocalDate.now())
+                .offerName("Big Room with view on the sea")
+                .description(description)
+                .city(krakow)
+                .amenities(amenities)
+                .build();
+    }
+
+    public Offer generateTwentyThird() {
+        City krakow = City.builder()
+                .id(1)
+                .province("Pomorskie")
+                .name("Sopot")
+                .build();
+
+        List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
+                Amenity.GARAGE,
+                Amenity.AIR_CONDITIONING));
+
+        Description description = Description.builder()
+                .id(1)
+                .objectDescription("someDescription")
+                .price(800)
+                .build();
+
+        return Offer.builder()
+                .id(23)
+                .localDate(LocalDate.now())
+                .offerName("Big Room with view on the sea")
+                .description(description)
+                .city(krakow)
+                .amenities(amenities)
+                .build();
+    }
+
+    public Offer generateTwentyFourth() {
+        City krakow = City.builder()
+                .id(1)
+                .province("Pomorskie")
+                .name("Sopot")
+                .build();
+
+        List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
+                Amenity.GARAGE,
+                Amenity.AIR_CONDITIONING));
+
+        Description description = Description.builder()
+                .id(1)
+                .objectDescription("someDescription")
+                .price(800)
+                .build();
+
+        return Offer.builder()
+                .id(24)
+                .localDate(LocalDate.now())
+                .offerName("Big Room with view on the sea")
+                .description(description)
+                .city(krakow)
+                .amenities(amenities)
+                .build();
+    }
+
+    public Offer generateTwentyFifth() {
+        City krakow = City.builder()
+                .id(1)
+                .province("Pomorskie")
+                .name("Sopot")
+                .build();
+
+        List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
+                Amenity.GARAGE,
+                Amenity.AIR_CONDITIONING));
+
+        Description description = Description.builder()
+                .id(1)
+                .objectDescription("someDescription")
+                .price(800)
+                .build();
+
+        return Offer.builder()
+                .id(25)
+                .localDate(LocalDate.now())
+                .offerName("Big Room with view on the sea")
+                .description(description)
+                .city(krakow)
+                .amenities(amenities)
+                .build();
+    }
+
+    public Offer generateTwentySixth() {
+        City krakow = City.builder()
+                .id(1)
+                .province("Pomorskie")
+                .name("Sopot")
+                .build();
+
+        List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
+                Amenity.GARAGE,
+                Amenity.AIR_CONDITIONING));
+
+        Description description = Description.builder()
+                .id(1)
+                .objectDescription("someDescription")
+                .price(800)
+                .build();
+
+        return Offer.builder()
+                .id(22)
+                .localDate(LocalDate.now())
+                .offerName("Big Room with view on the sea")
+                .description(description)
+                .city(krakow)
+                .amenities(amenities)
+                .build();
+    }
+
+    public Offer generateTwentySeven() {
+        City krakow = City.builder()
+                .id(1)
+                .province("Pomorskie")
+                .name("Sopot")
+                .build();
+
+        List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
+                Amenity.GARAGE,
+                Amenity.AIR_CONDITIONING));
+
+        Description description = Description.builder()
+                .id(1)
+                .objectDescription("someDescription")
+                .price(800)
+                .build();
+
+        return Offer.builder()
+                .id(27)
+                .localDate(LocalDate.now())
+                .offerName("Big Room with view on the sea")
+                .description(description)
+                .city(krakow)
+                .amenities(amenities)
+                .build();
+    }
+
+    public Offer generateTwentyEight() {
+        City krakow = City.builder()
+                .id(1)
+                .province("Pomorskie")
+                .name("Sopot")
+                .build();
+
+        List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
+                Amenity.GARAGE,
+                Amenity.AIR_CONDITIONING));
+
+        Description description = Description.builder()
+                .id(1)
+                .objectDescription("someDescription")
+                .price(800)
+                .build();
+
+        return Offer.builder()
+                .id(28)
+                .localDate(LocalDate.now())
+                .offerName("Big Room with view on the sea")
+                .description(description)
+                .city(krakow)
+                .amenities(amenities)
+                .build();
+    }
+    public Offer generateTwentyNineth() {
+        City krakow = City.builder()
+                .id(1)
+                .province("Pomorskie")
+                .name("Sopot")
+                .build();
+
+        List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
+                Amenity.GARAGE,
+                Amenity.AIR_CONDITIONING));
+
+        Description description = Description.builder()
+                .id(1)
+                .objectDescription("someDescription")
+                .price(800)
+                .build();
+
+        return Offer.builder()
+                .id(22)
+                .localDate(LocalDate.now())
+                .offerName("Big Room with view on the sea")
+                .description(description)
+                .city(krakow)
+                .amenities(amenities)
+                .build();
+    }
+
+    public Offer generateThirteenth() {
+        City krakow = City.builder()
+                .id(1)
+                .province("Pomorskie")
+                .name("Sopot")
+                .build();
+
+        List<Amenity> amenities = new ArrayList<>(List.of(Amenity.WIFI,
+                Amenity.GARAGE,
+                Amenity.AIR_CONDITIONING));
+
+        Description description = Description.builder()
+                .id(1)
+                .objectDescription("someDescription")
+                .price(800)
+                .build();
+
+        return Offer.builder()
+                .id(22)
+                .localDate(LocalDate.now())
+                .offerName("Big Room with view on the sea")
                 .description(description)
                 .city(krakow)
                 .amenities(amenities)
