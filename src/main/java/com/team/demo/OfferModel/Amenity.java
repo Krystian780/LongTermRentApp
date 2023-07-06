@@ -8,7 +8,7 @@ public enum Amenity {
 
     private String amenity;
 
-    Amenity(String amenity) {
+    Amenity(String amenity){
         this.amenity = amenity;
     }
 }

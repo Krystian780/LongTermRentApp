@@ -11,12 +11,13 @@ import lombok.NoArgsConstructor;
 @Entity
 @Builder
 @Data
-public class City {
+public class Host{
+
     @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE)
     private int id;
-    private String name;
-    private String country;
-    private String province;
+    private String firstName;
+    private String secondName;
+
 
 }

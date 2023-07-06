@@ -33,14 +33,6 @@ public class OfferService {
         return offerRepository.findAll();
     }
 
-    public List<Offer> getAllTestingOffers(){
-        return testingObjectCreator.getOffers();
-    }
-
-    public void addOfferToTestingList(Offer offer){
-        testingObjectCreator.addOffer(offer);
-    }
-    
     public List<City> getCities() {
         return offerRepository.findAll().stream()
                 .map(Offer::getCity)
@@ -49,12 +41,6 @@ public class OfferService {
 
     public List<Offer> getOffersForGivenCity(String city) {
         return offerRepository.findAll().stream()
-                .filter(offer -> offer.getCity().getName().equalsIgnoreCase(city))
-                .collect(Collectors.toList());
-    }
-
-    public List<Offer> getOffersForGivenCityTestWithouDatabase(String city) {
-        return getAllTestingOffers().stream()
                 .filter(offer -> offer.getCity().getName().equalsIgnoreCase(city))
                 .collect(Collectors.toList());
     }
@@ -69,6 +55,22 @@ public class OfferService {
         return offerRepository.findAll().stream()
                 .filter(offer -> offer.getDescription().getPrice()<=price)
                 .collect(Collectors.toList());
+    }
+
+    //TESTING TESTING OBJECT
+
+    public List<Offer> getOffersForGivenCityTestWithouDatabase(String city) {
+        return getAllTestingOffers().stream()
+                .filter(offer -> offer.getCity().getName().equalsIgnoreCase(city))
+                .collect(Collectors.toList());
+    }
+
+    public void addOfferToTestingList(Offer offer){
+        testingObjectCreator.addOffer(offer);
+    }
+
+    public List<Offer> getAllTestingOffers(){
+        return testingObjectCreator.getOffers();
     }
 
 }
