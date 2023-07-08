@@ -5,6 +5,7 @@ import lombok.*;
 import org.jetbrains.annotations.NotNull;
 
 import javax.validation.constraints.NotEmpty;
+import java.io.Serializable;
 
 @NoArgsConstructor
 @AllArgsConstructor

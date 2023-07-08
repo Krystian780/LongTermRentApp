@@ -6,6 +6,7 @@ import com.team.demo.security.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,7 +18,7 @@ public class RegisterController {
 
     @PostMapping("/user/registration")
     public void registerUserAccount(
-            User user) {
+            @RequestBody User user) {
         try {
             User registered = userService.registerNewUserAccount(user);
         } catch (UserAlreadyExistException uaeEx) {
