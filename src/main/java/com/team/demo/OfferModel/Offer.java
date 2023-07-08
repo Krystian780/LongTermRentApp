@@ -1,6 +1,5 @@
 package com.team.demo.OfferModel;
 
-import com.team.demo.UserDataModel.UserData;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -24,8 +23,6 @@ public class Offer {
     private Description description;
     @OneToOne(cascade = CascadeType.ALL, targetEntity = City.class)
     private City city;
-    @OneToOne(cascade = CascadeType.ALL, targetEntity = UserData.class)
-    private UserData userData;
     @ElementCollection(targetClass = Amenity.class)
     @CollectionTable
     @Enumerated(EnumType.STRING)
