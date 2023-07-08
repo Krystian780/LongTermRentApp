@@ -1,9 +1,6 @@
 package com.team.demo.OfferModel;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 import org.jetbrains.annotations.NotNull;
 
@@ -12,6 +9,7 @@ import javax.validation.constraints.NotEmpty;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Table(name = "users")
 @Builder
 @Data
 @ToString
