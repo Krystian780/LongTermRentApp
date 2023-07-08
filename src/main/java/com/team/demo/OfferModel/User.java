@@ -1,25 +1,28 @@
-package com.team.demo.security;
+package com.team.demo.OfferModel;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.*;
 import org.jetbrains.annotations.NotNull;
 
 import javax.validation.constraints.NotEmpty;
 
-public class UserDto {
-    @NotNull
-    @NotEmpty
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Builder
+@Data
+@ToString
+public class User {
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.SEQUENCE)
     private String firstName;
-
-    @NotNull
-    @NotEmpty
     private String lastName;
-
-    @NotNull
-    @NotEmpty
     private String password;
     private String matchingPassword;
-
-    @NotNull
-    @NotEmpty
     private String email;
 
     public String getFirstName() {
@@ -61,5 +64,4 @@ public class UserDto {
     public void setEmail(String email) {
         this.email = email;
     }
-
 }

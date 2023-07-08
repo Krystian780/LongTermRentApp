@@ -1,10 +1,9 @@
 package com.team.demo.Service;
 
-import com.team.demo.security.User;
-import com.team.demo.security.UserDto;
+import com.team.demo.OfferModel.User;
 
 public interface IUserService {
 
-    public User registerNewUserAccount(UserDto userDto);
+    public User registerNewUserAccount(User user);
 
 }

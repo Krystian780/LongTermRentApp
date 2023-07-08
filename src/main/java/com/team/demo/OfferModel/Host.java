@@ -19,5 +19,4 @@ public class Host{
     private String firstName;
     private String secondName;
 
-
 }
